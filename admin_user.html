@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="admin_user.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+     <script src="admin_user.js"></script> 
+    </head>
+<body>
+    <header>
+    </header>
+    <section>
+        <div>
+                <ul id="menu" >
+                        <li><a>User</a>
+                            <ul>
+                                <li><span onclick="consulter_user()">liste</span>  
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a>Rondonées</a>
+                            <ul>
+                                    <li><span onclick="consulter_rondo()">liste</span>  
+                                    </li>
+                             </ul>
+                        </li>
+                        <li><a>boutique</a>
+                            <ul>
+                                    <li><span onclick="boutique()">nouveau</span>  
+                                    </li>
+                                    <li><span onclick="consulter_boutique()">liste</span>  
+                                    </li> 
+                            </ul>
+                        </li>
+                 </ul>
+        </div>
+    </section>
+    <div class="bloc_user" id="bloc_user">
+          <div id="aa"></div>
+    </div>
+    <div class="bloc_rondo" id="bloc_rondo">
+            <div id="aa"></div>
+    </div>
+    <div>
+         <div class="bloc_boutique" id="bloc_boutique">
+                <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="boutique" placeholder="boutique">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="telb" placeholder="telephone">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="adrs" placeholder="address">
+                    </div>
+                    <div class="form-group">
+                        <input type="mail" class="form-control" id="email" placeholder="mail">
+                      </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="faceb" placeholder="facebook">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="insta" placeholder="instagrame">
+                      </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="art1" placeholder="nom article1">
+                      </div>
+                      <div class="form-group">
+                        <input type="file" class="form-control" id="image1" placeholder="image">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <input type="text" class="form-control" id="art2" placeholder="nom article2">
+                        </div>
+                        <div class="form-group">
+                          <input type="file" class="form-control" id="image2" placeholder="image">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <input type="text" class="form-control" id="art3" placeholder="nom article3">
+                        </div>
+                        <div class="form-group">
+                          <input type="file" class="form-control" id="image3" placeholder="image">
+                        </div>
+                      </div>
+                    <button type="submit" class="btn btn-primary" onclick="ajouter_boutique()">Ajouter</button>
+                  </form>
+         </div>
+            <div class="liste_boutique" id="liste_boutique">
+              <div id="bb"></div>
+            </div>
+    </div>
+   
+    <script src="admin_user.js"></script>  
+</body>
+</html>
