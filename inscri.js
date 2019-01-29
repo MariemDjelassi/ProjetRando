@@ -80,16 +80,20 @@ function ajouter (){
     var m=document.getElementById("mail").value;
     var mp=document.getElementById("mpass").value;
     var t=document.getElementById("tel").value;
+    var a=document.getElementById("adresse").value;
     var r=document.getElementById("selct").value;
+    var img=document.getElementById("img").value;
     user= {
         id : generetID(),
         role : r,
         nom :n,
         age : age,
         mail:m,
+        adresse :a,
         password:mp,
         tel:t,
-        confirmation :non,
+        image:img,
+        confirmation :false,
     }
     if ( r == "Participant"){
     var TAB = JSON.parse(localStorage.getItem("tabPAR"))||[];

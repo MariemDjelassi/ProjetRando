@@ -1,75 +1,69 @@
-function consulter_user(){
-   document.getElementById("bloc_user").style.display = "block";
-    var tab = JSON.parse(localStorage.getItem("tabR"));
-       for(i=0;i<tab.length;i++){
-        var j = tab[i].id;
-        var r = tab[i].role;
-        var n=tab[i].nom;
-        var p = tab[i].prénom;
-        var t= tab[i].tel;
-        var m = tab[i].mail;
-        var fb = tab[i].facebook;
-        var insta = tab[i].instagrame;
-        doc = document.getElementById("aa");
-        doc.innerHTML+=`
-        <table border="2px" id="${j}">
-                  <tr>
-            <td >${r}                                 </td>
-            <td >${n}                               </td>
-            <td >${p}                            </td>
-            <td >${t}                            </td>
-            <td >${m}                            </td>
-            <td >${fb}                            </td>
-            <td >${insta}                            </td>
-            <td ></td>
-            <td ></td>
-            <td ></td>
-            <td ></td>
-            <td ><button onclick="confirmer('${j}')">M</button>              </td>
-            <td ></td>
-            <td ><button onclick="supprimer('${j}')">X</button>              </td>
-            
-                   </tr>
-        </table>`;
-       }
+function consulter_par(){
+   document.getElementById("bloc_par").style.display = "block";
+   var tab = JSON.parse(localStorage.getItem("tabPAR"));
+   for(i=0;i<tab.length;i++){
+    var j = tab[i].id;
+    var n=tab[i].nom;
+    var ag=tab[i].age;
+    var t= tab[i].tel;
+    var m = tab[i].mail;
+    var a = tab[i].adresse;
+    var img = tab[i].Image;
+    doc = document.getElementById("aa");
+    doc.innerHTML+=`
+    <table border="1px" id="${j}">
+              <tr>
+        <td >${img}</td>
+        <td >${n}</td>
+        <td >${ag}</td>
+        <td >${t}</td>
+        <td >${m}</td>
+        <td >${a}</td>
+        <td ></td>
+        <td ><button onclick="confirmer('${j}')">M</button></td>
+        <td ></td>
+        <td ><button onclick="supprimer('${j}')">X</button></td>
+               </tr>
+    </table>`;
+   }
 }
 
 
+
 function consulter_ORG(){
-    document.getElementById("bloc_rondo").style.display = "block";
-     var tab1 = JSON.parse(localStorage.getItem("tabORG"));
-        for(i=0;i<tab1.length;i++){
+    document.getElementById("bloc_ord").style.display = "block";
+     var tab = JSON.parse(localStorage.getItem("tabORG"));
+        for(i=0;i<tab.length;i++){
          var j = tab[i].id;
-         var r = tab[i].role;
          var n=tab[i].nom;
-         var p = tab[i].prénom;
          var t= tab[i].tel;
          var m = tab[i].mail;
-         var fb = tab[i].facebook;
-         var insta = tab[i].instagrame;
+         var a = tab[i].adress;
+         var img = tab[i].Image;
          doc = document.getElementById("aa");
          doc.innerHTML+=`
          <table border="1px" id="${j}">
                    <tr>
-             <td >${r}                                 </td>
-             <td >${n}                               </td>
-             <td >${p}                            </td>
-             <td >${t}                            </td>
-             <td >${m}                            </td>
-             <td >${fb}                            </td>
-             <td >${insta}                            </td>
+             <td >${img}</td>
+             <td >${n}</td>
+             <td >${t}</td>
+             <td >${m}</td>
+             <td >${a}</td>
              <td ></td>
+             <td ><button onclick="confirmer('${j}')">M</button></td>
              <td ></td>
-             <td ></td>
-             <td ></td>
-             <td ><button onclick="confirmer('${j}')">M</button>              </td>
-             <td ></td>
-             <td ><button onclick="supprimer('${j}')">X</button>              </td>
+             <td ><button onclick="supprimer('${j}')">X</button></td>
              
                     </tr>
          </table>`;
         }
  }
+function consulter_rondo(){
+       document.getElementById("bloc_rondo").style.display = "block";
+       var tab = JSON.parse(localStorage.getItem("tab"));
+}
+
+
  function boutique(){
        document.getElementById("bloc_boutique").style.display = "block";
  }
@@ -128,7 +122,7 @@ function generetID()
 {
     return '_' + Math.random().toString(36).substr(2, 9);
 }
-
+/*
 function consulter_boutique(){
        document.getElementById("liste_boutique").style.display = "block";
        var tab = JSON.parse(localStorage.getItem("tabboutique"));
@@ -174,3 +168,19 @@ function consulter_boutique(){
            </table>`;
           }
 }
+*/
+$(document).ready(function() {
+       $('a[data-toggle="tabboutique"]').on( 'shown.bs.tabboutique', function (e) {
+           $.fn.dataTable.tables( {visible: true, api: true} ).columns.adjust();
+       } );
+        
+       $('table.table').DataTable( {
+           ajax:           '../ajax/data/arrays.txt',
+           scrollY:        200,
+           scrollCollapse: true,
+           paging:         false
+       } );
+    
+       // Apply a search to the second table for the demo
+       $('#myTable2').DataTable().search( 'New York' ).draw();
+   } );

@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="admin_user.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-     <script src="admin_user.js"></script> 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link hrf="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+    <script src="admin_user.js"></script> 
     </head>
 <body>
     <header>
@@ -17,13 +19,13 @@
                 <ul id="menu" >
                         <li><a>Organisateur</a>
                             <ul>
-                                <li><span onclick="consulter_user()">liste</span>  
+                                <li><span onclick="consulter_org()">liste</span>  
                                 </li>
                             </ul>
                         </li>
                         <li><a>Participant</a>
                           <ul>
-                              <li><span onclick="consulter_part()">liste</span>  
+                              <li><span onclick="consulter_par()">liste</span>  
                               </li>
                           </ul>
                       </li>
@@ -44,8 +46,11 @@
                  </ul>
         </div>
     </section>
-    <div class="bloc_user" id="bloc_user">
+    <div class="bloc_ord" id="bloc_ord">
           <div id="aa"></div>
+    </div>
+    <div class="bloc_par" id="bloc_par">
+      <div id="aa"></div>
     </div>
     <div class="bloc_rondo" id="bloc_rondo">
             <div id="aa"></div>
@@ -100,11 +105,23 @@
                     <button type="submit" class="btn btn-primary" onclick="ajouter_boutique()">Ajouter</button>
                   </form>
          </div>
-            <div class="liste_boutique" id="liste_boutique">
+          <!--  <div class="liste_boutique" id="liste_boutique">
               <div id="bb"></div>
             </div>
-    </div>
-   
+            -->
+      <div class="liste_boutique" id="liste_boutique">
+          <table id="myTable1" class="table table-striped table-bordered" cellspacing="0" width="100%">
+              <thead>
+                  <tr>
+                      <th>Nom</th>
+                      <th>tel</th>
+                      <th>Adresse</th>
+                      <th>facebook</th>
+                      <th>instagrame</th>
+                  </tr>
+              </thead>
+          </table>
+      </div>
     <script src="admin_user.js"></script>  
 </body>
 </html>
