@@ -35,10 +35,10 @@ function consulter_user(){
 }
 
 
-function consulter_rondo(){
+function consulter_ORG(){
     document.getElementById("bloc_rondo").style.display = "block";
-     var tab = JSON.parse(localStorage.getItem("tabRondo"));
-        for(i=0;i<tab.length;i++){
+     var tab1 = JSON.parse(localStorage.getItem("tabORG"));
+        for(i=0;i<tab1.length;i++){
          var j = tab[i].id;
          var r = tab[i].role;
          var n=tab[i].nom;
@@ -49,7 +49,7 @@ function consulter_rondo(){
          var insta = tab[i].instagrame;
          doc = document.getElementById("aa");
          doc.innerHTML+=`
-         <table id="${j}">
+         <table border="1px" id="${j}">
                    <tr>
              <td >${r}                                 </td>
              <td >${n}                               </td>
@@ -148,9 +148,9 @@ function consulter_boutique(){
            var m3 = tab[i].image3;
            doc = document.getElementById("bb");
            doc.innerHTML+=`
-           <table border="2px" id="${j}">
+           <table border="1px" id="${j}">
                      <tr>
-               <td >${n}                            </td>
+               <td>${n}a</td>
                <td >${t}                            </td>
                <td >${m}                            </td>
                <td >${d}                            </td>
