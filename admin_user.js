@@ -148,7 +148,7 @@ function consulter_boutique(){
            var m3 = tab[i].image3;
            doc = document.getElementById("bb");
            doc.innerHTML+=`
-           <table id="${j}">
+           <table border="2px" id="${j}">
                      <tr>
                <td >${n}                            </td>
                <td >${t}                            </td>
