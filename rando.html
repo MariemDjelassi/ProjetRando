@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rando Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/rando.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
+   
+
+</head>
+
+<body>
+    <form action="" method="post">
+        <fieldset><legend> Randonnée  </legend>
+            <br>
+        <div>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="rando_name" /><br>
+        </div>
+        <div>
+            <label for="depart">Date Départ :</label>
+            <input type="date" id="depart" name="rando_depart" /><br>
+        </div>
+        <div>
+            <label for="arrivee">Date Arrivée :</label>
+            <input type="date" id="arrivee" name="rando_arrivee" /><br>
+        </div>
+        <div>
+            <label for="periode">Période :</label>
+            <input type="text" id="periode" name="rando_periode" /><br>
+        </div>
+        <div>
+            <label for="destination">Destination :</label>
+            <input type="text" id="destination" name="rando_destination" /><br>
+        </div>
+        <div>
+            <label for="prix">Prix :</label>
+            <input type="number" id="prix" name="rando_price" /><br>
+        </div>
+        <div>
+            <label for="places">Nombre de place :</label>
+            <input type="number" id="places" name="rando_places" /><br>
+        </div>
+        <div>
+            <label for="image">Image :</label>
+            <input type="file" id="image" name="rando_image" /><br>
+        </div>
+        <div>
+            <label for="details">Détails :</label>
+            <textarea id="details" name="rando_details"></textarea><br><br>
+        </div>
+        <div class="button">
+            <button type="submit" onclick="createRando()" class="btn"> <a class="ft">Valider</a> </button><br><br>
+            <button onclick="removeRando()">remove</button>
+        </div>
+    </fieldset>
+    </form>
+
+    <!--
+    <div>
+        <h3>Organiser une randonnée<br><br></h3>
+        <table border="0">
+            <tr>
+                <td class="td1">Nom:</td>
+                <td><input type="text" id="name" class="td2"></td>
+            </tr>
+            <tr>
+                <td class="td1">Date Départ:</td>
+                <td><input type="date" id="depart" class="td2"></td>
+            </tr>
+            <tr>
+                <td class="td1">Date Arrivée:</td>
+                <td><input type="date" id="arrivee" class="td2"></td>
+            </tr>
+            <tr>
+                <td class="td1">Période:</td>
+                <td><input type="number" id="periode" class="td2">jours</td>
+            </tr>
+            <tr>
+                <td class="td1">Destination:</td>
+                <td><input type="text" id="destination" class="td2"></td>
+            </tr>
+            <tr>
+                <td class="td1">Prix:</td>
+                <td><input type="number" id="prix" class="td2">dt</td>
+            </tr>
+            <tr>
+                <td class="td1">Nombre de place:</td>
+                <td><input type="number" id="places" class="td2"></td>
+            </tr>
+            <tr>
+                <td class="td1">Image:</td>
+                <td><input type="button" onclick="" class="td2">upload</td>
+            </tr>
+            <tr>
+                <td class="td1">Détails:</td>
+                <td><input type="text" id="details" class="td2"></td>
+            </tr>
+        </table><br>
+        <button type="submit" onclick="" class="btn">Valider</button></p>
+    </div>
+-->
+    <script src="./js/rando.js"></script>
+</body>
+
+</html>
