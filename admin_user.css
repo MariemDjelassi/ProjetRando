@@ -1,0 +1,104 @@
+/*body{
+    background-image: url("admin.jpg");
+    background-repeat: no-repeat;
+ }*/
+header{
+    width: 100%;
+    height: 100px;
+    background-image: url("rand.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+}
+footer{
+    height: 100px;
+}
+
+section{
+   position: absolute;
+   top:22%;
+   height: 500px;
+   width: 15%;
+   background-color: beige;
+}
+
+#menu, #menu ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    width:100%;
+}
+#menu li {
+    position:relative;
+    background:  beige;
+}
+#menu ul, #menu li:hover ul ul {
+    position: absolute;
+    left:-999em;
+    top:0
+}
+#menu li:hover ul, #menu li li:hover ul {
+    left:162px;
+}
+#menu li:hover {
+    background: #999
+}
+#menu a {
+    display:block;
+    text-decoration: none;
+    padding:8px;
+    color:black;
+}
+#menu li:hover li a, #menu li li:hover li a {
+    color:black;
+}
+#menu li:hover a, #menu li li:hover a, #menu li li li:hover a {
+    color:white;
+}
+
+.bloc_ord{
+    position : absolute;
+    display: none;
+    top : 30%;
+    left: 20%;
+    width: 70%;
+    height: 300px;
+    border:1px solid black;
+}
+
+.bloc_rondo{
+    position : absolute;
+    display: none;
+    top : 30%;
+    left: 20%;
+    width: 70%;
+    height: 300px;
+    border:1px solid black;
+}
+
+.bloc_boutique{
+    position : absolute;
+    display: none;
+    top : 30%;
+    left: 20%;
+    width: 70%;
+    height: 300px;
+}
+
+.liste_boutique{
+    position : absolute;
+    display: none;
+    top : 30%;
+    left: 20%;
+    width: 70%;
+    height: 300px;
+   /* border:1px solid black;  */
+}
+.bloc_par{
+    position : absolute;
+    display: none;
+    top : 30%;
+    left: 20%;
+    width: 70%;
+    height: 300px;
+    border:1px solid black;
+}
