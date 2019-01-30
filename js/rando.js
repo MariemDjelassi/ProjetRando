@@ -27,6 +27,7 @@ function createRando() {
 }
 
 //    supprimer une rondonnée existe
+/*
 
 function removeRando(idRd) {
     var tabRando = JSON.parse(localStorage.getItem('randoTab'));
@@ -36,3 +37,15 @@ function removeRando(idRd) {
         }
     }
 }
+
+function name(params) {
+    if (typeof(Storage) !== "undefined") {
+        // Store
+        localStorage.setItem("lastname", "Smith");
+        // Retrieve
+        document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+      } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+      }
+}
+ */

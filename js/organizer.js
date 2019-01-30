@@ -5,3 +5,8 @@ function signUp(){
     localStorage.removeItem("nameUserConnect");
     window.location.href="home.html";
 }
+
+
+function search(){
+    
+}

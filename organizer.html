@@ -7,12 +7,43 @@
     <title>Home Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/organizer.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
 
 </head>
 
 <body>
-    
+    <header>
+        <h1>Plan Your Adventure</h1>
+    </header>
+    <nav>
+        <div>
+            <ul>
+                <li>
+                    <button>HOME</button>
+                </li>
+                <li>
+                    <button>PROFILE</button>
+                </li>
+                <li>
+                    <button>RANDONNEE</button>
+                </li>
+                <li>
+                    <button>RESERVATION</button>
+                </li>
+                <li>
+                    <input type="text" placeholder="Recherche" id="search"/>
+                    <button onclick="search()">Ok</button>
+                </li>
+                <li>
+                    <button onclick="signUp()">Sign Up</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <footer>
+        Five Points Talent Pool - Copyrights 2019
+    </footer>
 
 
     <script src="./js/organizer.js"></script>
