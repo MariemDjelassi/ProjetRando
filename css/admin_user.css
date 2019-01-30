@@ -5,10 +5,11 @@
 header{
     width: 100%;
     height: 100px;
-    background-image: url("rand.jpg");
+    background-image: url("../img/rand.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;  
 }
+
 footer{
     height: 100px;
 }

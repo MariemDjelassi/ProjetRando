@@ -1,92 +1,99 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="rondo.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="rondo.js"></script>
-    <script language="javascript" type="text/javascript">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/rondo.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <script src="./js/rondo.js"></script>
+  <script language="javascript" type="text/javascript">
 
-      var i1 = new Image;
-      var i2 = new Image;
-      var i3 = new Image;
-      var i4 = new Image;
-      var i5 = new Image;
+    var i1 = new Image;
+    var i2 = new Image;
+    var i3 = new Image;
+    var i4 = new Image;
+    var i5 = new Image;
 
-      var i6 = new Image;
-      var i7 = new Image;
-      var i8 = new Image;
-      var i9 = new Image;
-      var i10 = new Image;
-      var i11 = new Image;
-      var i12 = new Image;
-    
-      i1.src = "image/rivier.jpg";
-      i2.src = "image/lac.jpg";
-      i3.src = "image/jandouba.jpg";
-      i4.src = "image/sidi_boussid.jpg";
-      i5.src = "image/montagne.jpg";
-    </script>
-  </head>
+    var i6 = new Image;
+    var i7 = new Image;
+    var i8 = new Image;
+    var i9 = new Image;
+    var i10 = new Image;
+    var i11 = new Image;
+    var i12 = new Image;
+
+    i1.src = "image/rivier.jpg";
+    i2.src = "image/lac.jpg";
+    i3.src = "image/jandouba.jpg";
+    i4.src = "image/sidi_boussid.jpg";
+    i5.src = "image/montagne.jpg";
+  </script>
+</head>
+
 <body>
-    <div class="header_rondo">
-        <div class="possition_nav">
-                <nav>
-                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Acueil</a>
-                          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="inscri.html" role="tab" aria-controls="nav-profile" aria-selected="false">Inscription</a>
-                          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="login.html" role="tab" aria-controls="nav-contact" aria-selected="false">Connection</a>
-                        </div>
-                </nav>
-       </div>
+  <div class="header_rondo">
+    <div class="possition_nav">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+            aria-controls="nav-home" aria-selected="true">Acueil</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="inscri.html" role="tab"
+            aria-controls="nav-profile" aria-selected="false">Inscription</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="login.html" role="tab"
+            aria-controls="nav-contact" aria-selected="false">Connection</a>
+        </div>
+      </nav>
     </div>
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Rondonees</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">forum</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">contact</a>
-      </li>
-    </ul>
-    <div class="Rondonees" id="conteneur">
-      <div id="centre">
-        <div class="texte_photo" id="texteph" >Titre de la photo</div>
-        <div class="miniature">
-          <img src="image\image-defaut.jpg" alt="" class="img_miniature" id="mini1" onClick="selection(1)" />
-        </div>
-        <div class="miniature" style="left:173px;">
-          <img src="image\image-defaut.jpg" alt="" class="img_miniature" id="mini2" onClick="selection(2)" />
-        </div>
-        <div class="miniature" style="left:346px;">
-          <img src="image\image-defaut.jpg" alt="" class="img_miniature" id="mini3" onClick="selection(3)" />
-        </div>
-        <div class="miniature" style="left:519px;">
-          <img src="image\image-defaut.jpg" alt="" class="img_miniature" id="mini4" onClick="selection(4)"/>
-        </div>					
-        <div id="precedent">
-          <input type="button" value="<<" title="Photo précédente" onclick="defiler('arriere')"/>
-        </div>
-        <div style="position:absolute;">
-          <img src="image\image-defaut.jpg" alt="" id="album"/>
-        </div>
-        <div id="suivant">
-          <input type="button" value=">>" title="Photo suivante" onclick="defiler('avant')"/>
-        </div>			
+  </div>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Rondonees</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">forum</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">contact</a>
+    </li>
+  </ul>
+  <div class="Rondonees" id="conteneur">
+    <div id="centre">
+      <div class="texte_photo" id="texteph">Titre de la photo</div>
+      <div class="miniature">
+        <img src="image\image-defaut.jpg" alt="" class="img_miniature" id="mini1" onClick="selection(1)" />
+      </div>
+      <div class="miniature" style="left:173px;">
+        <img src="image\image-defaut.jpg" alt="" class="img_miniature" id="mini2" onClick="selection(2)" />
+      </div>
+      <div class="miniature" style="left:346px;">
+        <img src="image\image-defaut.jpg" alt="" class="img_miniature" id="mini3" onClick="selection(3)" />
+      </div>
+      <div class="miniature" style="left:519px;">
+        <img src="image\image-defaut.jpg" alt="" class="img_miniature" id="mini4" onClick="selection(4)" />
+      </div>
+      <div id="precedent">
+        <input type="button" value="<<" title="Photo précédente" onclick="defiler('arriere')" />
+      </div>
+      <div style="position:absolute;">
+        <img src="image\image-defaut.jpg" alt="" id="album" />
+      </div>
+      <div id="suivant">
+        <input type="button" value=">>" title="Photo suivante" onclick="defiler('avant')" />
       </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <footer>
-    </footer>
-    <script src="rondo.js"></script> 
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <footer>
+  </footer>
+  <script src="./js/rondo.js"></script>
 </body>
+
 </html>

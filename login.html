@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="Login.css" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/login.css" />
 </head>
+
 <body>
-        <fieldset class="box"> 
-                <legend class="style-legend"> Login </legend> 
-            <div class="text-box">
-              <label for="mail">Mail:</label>
-              <input type="mail" id="mail" placeholder="Votre Mail ">
-            </div>
-            <div class="text-box">
-              <label for="pwd">PassWord:</label>
-              <input type="password" id="pwd" placeholder="Votre PassWord ">
-            </div>
-          <button class="btn" onclick="recherche()">Connexion</button>
-         </fieldset>
-    <script src="login.js"></script> 
+  <fieldset class="box">
+    <legend class="style-legend"> Connexion </legend>
+    <div class="text-box">
+      <label for="mail">Adresse mail :</label>
+      <input type="mail" id="mail" placeholder="Tapez votre adresse mail ">
+    </div>
+    <div class="text-box">
+      <label for="pwd">Mot de passe :</label>
+      <input type="password" id="pwd" placeholder="Tapez votre mot de passe ">
+    </div>
+    <button class="btn" onclick="recherche()">Log In</button>
+  </fieldset>
+  <script src="./js/login.js"></script>
 </body>
+
 </html>

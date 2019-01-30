@@ -1,16 +1,16 @@
-function consulter_par(){
-   document.getElementById("bloc_par").style.display = "block";
-   var tab = JSON.parse(localStorage.getItem("tabPAR"));
-   for(i=0;i<tab.length;i++){
-    var j = tab[i].id;
-    var n=tab[i].nom;
-    var ag=tab[i].age;
-    var t= tab[i].tel;
-    var m = tab[i].mail;
-    var a = tab[i].adresse;
-    var img = tab[i].Image;
-    doc = document.getElementById("aa");
-    doc.innerHTML+=`
+function consulter_par() {
+    document.getElementById("bloc_par").style.display = "block";
+    var tab = JSON.parse(localStorage.getItem("tabPAR"));
+    for (i = 0; i < tab.length; i++) {
+        var j = tab[i].id;
+        var n = tab[i].nom;
+        var ag = tab[i].age;
+        var t = tab[i].tel;
+        var m = tab[i].mail;
+        var a = tab[i].adresse;
+        var img = tab[i].Image;
+        doc = document.getElementById("aa");
+        doc.innerHTML += `
     <table border="1px" id="${j}">
               <tr>
         <td >${img}</td>
@@ -25,23 +25,23 @@ function consulter_par(){
         <td ><button onclick="supprimer('${j}')">X</button></td>
                </tr>
     </table>`;
-   }
+    }
 }
 
 
 
-function consulter_ORG(){
+function consulter_ORG() {
     document.getElementById("bloc_ord").style.display = "block";
-     var tab = JSON.parse(localStorage.getItem("tabORG"));
-        for(i=0;i<tab.length;i++){
-         var j = tab[i].id;
-         var n=tab[i].nom;
-         var t= tab[i].tel;
-         var m = tab[i].mail;
-         var a = tab[i].adress;
-         var img = tab[i].Image;
-         doc = document.getElementById("aa");
-         doc.innerHTML+=`
+    var tab = JSON.parse(localStorage.getItem("tabORG"));
+    for (i = 0; i < tab.length; i++) {
+        var j = tab[i].id;
+        var n = tab[i].nom;
+        var t = tab[i].tel;
+        var m = tab[i].mail;
+        var a = tab[i].adress;
+        var img = tab[i].Image;
+        doc = document.getElementById("aa");
+        doc.innerHTML += `
          <table border="1px" id="${j}">
                    <tr>
              <td >${img}</td>
@@ -56,70 +56,68 @@ function consulter_ORG(){
              
                     </tr>
          </table>`;
-        }
- }
-function consulter_rondo(){
-       document.getElementById("bloc_rondo").style.display = "block";
-       var tab = JSON.parse(localStorage.getItem("tab"));
+    }
+}
+function consulter_rondo() {
+    document.getElementById("bloc_rondo").style.display = "block";
+    var tab = JSON.parse(localStorage.getItem("tab"));
 }
 
 
- function boutique(){
-       document.getElementById("bloc_boutique").style.display = "block";
- }
+function boutique() {
+    document.getElementById("bloc_boutique").style.display = "block";
+}
 
-function ajouter_boutique(){
- var b = document.getElementById("boutique").value;
- var tel = document.getElementById("telb").value;
- var ads = document.getElementById("adrs").value;
- var m = document.getElementById("email").value;
- var face = document.getElementById("faceb").value;
- var inst = document.getElementById("insta").value;
- var a1 = document.getElementById("art1").value;
- var img1= document.getElementById("image1").value;
- var a2 = document.getElementById("art2").value;
- var img2= document.getElementById("image2").value;
- var a3 = document.getElementById("art3").value;
- var img3= document.getElementById("image3").value;
- console.log("hhhhhh");
- if( (b !="") && (tel !="") && (ads !="") && mail() && (a1 !="") &&  (img1 !="")){
+function ajouter_boutique() {
+    var b = document.getElementById("boutique").value;
+    var tel = document.getElementById("telb").value;
+    var ads = document.getElementById("adrs").value;
+    var m = document.getElementById("email").value;
+    var face = document.getElementById("faceb").value;
+    var inst = document.getElementById("insta").value;
+    var a1 = document.getElementById("art1").value;
+    var img1 = document.getElementById("image1").value;
+    var a2 = document.getElementById("art2").value;
+    var img2 = document.getElementById("image2").value;
+    var a3 = document.getElementById("art3").value;
+    var img3 = document.getElementById("image3").value;
+    console.log("hhhhhh");
+    if ((b != "") && (tel != "") && (ads != "") && mail() && (a1 != "") && (img1 != "")) {
         console.log("ok");
- var boutique={
-        id:generetID(),
-        nom : b,
-        tele : tel,
-        mail : m,
-        adresse : ads,
-        facebook : face,
-        instagrame :inst,
-        article1 : a1,
-        image1 : image1,
-        article2 : a2,
-        image2 : image2,
-        article3 : a3,
-        image3 : image3,
- }
- var TAB = JSON.parse(localStorage.getItem("tabboutique"))||[];
-     if (TAB == null ) {TAB=[];}
- TAB.push(boutique);
- localStorage.setItem("tabboutique",JSON.stringify(TAB));
-}
-    else { alert("il faut remplire les champs correctement");}
+        var boutique = {
+            id: generetID(),
+            nom: b,
+            tele: tel,
+            mail: m,
+            adresse: ads,
+            facebook: face,
+            instagrame: inst,
+            article1: a1,
+            image1: image1,
+            article2: a2,
+            image2: image2,
+            article3: a3,
+            image3: image3,
+        }
+        var TAB = JSON.parse(localStorage.getItem("tabboutique")) || [];
+        if (TAB == null) { TAB = []; }
+        TAB.push(boutique);
+        localStorage.setItem("tabboutique", JSON.stringify(TAB));
+    }
+    else { alert("il faut remplire les champs correctement"); }
 }
 
-function mail(){
-       var e=document.getElementById("email").value;
-       var r = true;
-       if(((e.indexOf("@"))<0) || (e.indexOf(".")<0) || ((e.indexOf("@"))>(e.indexOf("."))) || (e=("")))
-       {
-           alert ("email invalide");
-           r=false;
-       }
-       return r;
-   }
+function mail() {
+    var e = document.getElementById("email").value;
+    var r = true;
+    if (((e.indexOf("@")) < 0) || (e.indexOf(".") < 0) || ((e.indexOf("@")) > (e.indexOf("."))) || (e = (""))) {
+        alert("email invalide");
+        r = false;
+    }
+    return r;
+}
 
-function generetID()
-{
+function generetID() {
     return '_' + Math.random().toString(36).substr(2, 9);
 }
 /*
@@ -169,18 +167,20 @@ function consulter_boutique(){
           }
 }
 */
-$(document).ready(function() {
-       $('a[data-toggle="tabboutique"]').on( 'shown.bs.tabboutique', function (e) {
-           $.fn.dataTable.tables( {visible: true, api: true} ).columns.adjust();
-       } );
-        
-       $('table.table').DataTable( {
-           ajax:           '../ajax/data/arrays.txt',
-           scrollY:        200,
-           scrollCollapse: true,
-           paging:         false
-       } );
-    
-       // Apply a search to the second table for the demo
-       $('#myTable2').DataTable().search( 'New York' ).draw();
-   } );
+/*
+$(document).ready(function () {
+    $('a[data-toggle="tabboutique"]').on('shown.bs.tabboutique', function (e) {
+        $.fn.dataTable.tables({ visible: true, api: true }).columns.adjust();
+    });
+
+    $('table.table').DataTable({
+        ajax: '../ajax/data/arrays.txt',
+        scrollY: 200,
+        scrollCollapse: true,
+        paging: false
+    });
+
+    // Apply a search to the second table for the demo
+    $('#myTable2').DataTable().search('New York').draw();
+});
+*/

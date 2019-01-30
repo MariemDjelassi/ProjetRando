@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="inscri.css" /> 
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/inscri.css" />
 </head>
+
 <body>
     <div class="pose">
         <div class="text">
-                <h1>Inscription</h1>
+            <h1>Inscription</h1>
         </div>
-                <biv class="box">
-                    <div class="text-box">
-                        <label for="nom">Nom:</label>
-                        <input type="text" id="nom" placeholder="Votre Nom ">
-                    </div>
-                    <div class="text-box">
-                            <label for="age">Age:</label>
-                            <input type="number" id="age" placeholder="Votre Age ">
-                          </div>
-                    <div class="text-box">
-                        <label for="mail">Mail:</label>
-                        <input type="mail" id="mail" placeholder="Votre Mail ">
-                    </div>
-                    <div class="text-box">
-                        <label for="pwd">PassWord:</label>
-                        <input type="password" id="mpass" placeholder="Votre PassWord ">
-                    </div>
-                    <div class="text-box">
-                        <label for="tel">Télphone:</label>
-                        <input type="text" id="tel" placeholder="Votre Télphone ">
-                    </div> <div class="text-box">
-                            <label for="adresse">Adresse:</label>
-                            <input type="text" id="adresse" placeholder="Votre Adresse ">
-                        </div>
-                    <div class="text-box">
-                            <label for="selct"> list :</label>
-                            <select  id="selct">
-                              <option>Choose</option> 
-                              <option>Participant</option>
-                              <option>Organisateur</option>
-                            </select>
-                    </div>
-                    <div class="text-box">
-                        <label for="img">Image:</label>
-                        <input type="file" id="img" accept="image/*">
-                    </div>
-                  <button onclick="inscription()" class="btn">S'inscrire</button>
-        </div>
-        <script src="inscri.js"></script>
+        <biv class="box">
+            <div class="text-box">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" placeholder="Tapez votre nom "><br>
+            </div>
+            <div class="text-box">
+                <label for="age">Date de Naissance :</label>
+                <input type="date" id="age" placeholder="Tapez votre date de naissance "><br>
+            </div>
+            <div class="text-box">
+                <label for="mail">Adresse Mail :</label>
+                <input type="mail" id="mail" placeholder="Tapez votre adresse mail "><br>
+            </div>
+            <div class="text-box">
+                <label for="pwd">Mot de passe :</label>
+                <input type="password" id="mpass" placeholder="Tapez votre mot de passe "><br>
+            </div>
+            <div class="text-box">
+                <label for="tel">Téléphone :</label>
+                <input type="text" id="tel" placeholder="Tapez votre téléphone "><br>
+            </div>
+            <div class="text-box">
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" placeholder="Tapez votre adresse "><br>
+            </div>
+            <div class="text-box">
+                <label for="selct"> Profil :</label>
+                <select id="selct">
+                    <option>choisir votre profil</option>
+                    <option>Organisateur</option>
+                    <option>Participant</option>
+                </select><br>
+            </div>
+            <div class="text-box">
+                <label for="img">Image :</label>
+                <input type="file" id="img" accept="image/*"><br>
+            </div>
+            <button onclick="registerUser()" class="btn">Valider</button>
+    </div>
+
+    <script src="./js/inscri.js"></script>
 </body>
+
 </html>
