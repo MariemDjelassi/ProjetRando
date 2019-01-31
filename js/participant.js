@@ -1,9 +1,5 @@
 // se déconnecter de la plateform
 function signUp() {
-    localStorage.removeItem("idOrgConnect");
+    localStorage.removeItem("idPartConnect");
     window.location.href = "home.html";
-}
-
-function search() {
-
 }

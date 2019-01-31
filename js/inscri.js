@@ -5,36 +5,44 @@ function generateID() {
 function createUser() {
     var user = {
         id: generateID(),
-        nom: document.getElementById("nom").value,
+        name: document.getElementById("nom").value,
         age: document.getElementById("age").value,
         mail: document.getElementById("mail").value,
         password: document.getElementById("mpass").value,
         tel: document.getElementById("tel").value,
-        adresse: document.getElementById("adresse").value,
+        adress: document.getElementById("adresse").value,
         role: document.getElementById("selct").value,
         image: document.getElementById("img").value,
-        confirmation: false,
+        //confirmation: false,
     }
-    if (role == "Participant") {
+    if (user.role == "Participant") {
         var tabPAR = JSON.parse(localStorage.getItem("tabPAR")) || [];
         tabPAR.push(user);
         localStorage.setItem("tabPAR", JSON.stringify(tabPAR));
+        // recuperer l'id user inscrit
+        var tabPartId = JSON.parse(localStorage.getItem("idPartConnect")) || [];
+        tabPartId.push(user.id);
+        localStorage.setItem("idPartConnect", JSON.stringify(tabPartId));
         window.location.href = "participant.html";
     }
     else {
         var tabORG = JSON.parse(localStorage.getItem("tabORG")) || [];
         tabORG.push(user);
         localStorage.setItem("tabORG", JSON.stringify(tabORG));
+        // recuperer l'id user inscrit
+        var tabOrgId = JSON.parse(localStorage.getItem("idOrgConnect")) || [];
+        tabOrgId.push(user.id);
+        localStorage.setItem("idOrgConnect", JSON.stringify(tabOrgId));
         window.location.href = "organizer.html";
     }
 }
 
 function registerUser() {
-    if (verifyName() && verifyAge() && verifyMail() && verifyPwd() && verifyTel() && verifyRole()) {
+    if (verifyName() && verifyMail() && verifyPwd() && verifyTel() && verifyRole()) {
         createUser();
         //alert("inscription reussit");
     } else {
-        alert("il faut remplire tous les champs correctement");
+        alert("remplire tous les champs");
     }
 }
 
@@ -53,7 +61,7 @@ function verifyName() {
     }
     return r;
 }
-
+/*
 function verifyAge() {
     var n = document.getElementById("age").value;
     var r = true;
@@ -62,45 +70,45 @@ function verifyAge() {
     }
     return r;
 }
-
+*/
 function verifyMail() {
     var e = document.getElementById("mail").value;
-    var r = true;
+    var verif = true;
     if (((e.indexOf("@")) < 0) || (e.indexOf(".") < 0) || ((e.indexOf("@")) > (e.indexOf("."))) || (e = (""))) {
         alert("email invalide");
-        r = false;
+        verif = false;
     }
-    return r;
+    return verif;
 }
 
 function verifyPwd() {
     var p = document.getElementById("mpass").value;
-    var r = true;
+    var verif = true;
     if (p.length < 8) {
         alert("mot de pass invalide il faut que etre >8");
-        r = false;
+        verif = false;
     }
-    return r;
+    return verif;
 }
 
 function verifyTel() {
-    var t = document.getElementById("tel").value;
-    var r = true;
-    if (t.length < 8) {
+    var tel = document.getElementById("tel").value;
+    var verif = true;
+    if (tel.length < 8) {
         alert("n° de tel invalide il faut que etre >8");
-        r = false;
+        verif = false;
     }
-    return r;
+    return verif;
 }
 
 function verifyRole() {
-    var r = document.getElementById("selct").value;
-    var r = true;
-    if (r == "Choose") {
-        alert("il faut choisir org/par");
-        r = false;
+    var role = document.getElementById("selct").value;
+    var verif = true;
+    if (role == "choisir votre profil") {
+        alert("il faut choisir le profil");
+        verif = false;
     }
-    return r;
+    return verif;
 }
 
 

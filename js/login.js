@@ -1,35 +1,32 @@
+function verifLogIn() {
+    var verif = false;
+    var log = document.getElementById("email").value;
+    var pswd = document.getElementById("pwd").value;
+    var tabUserOrg = JSON.parse(localStorage.getItem('tabORG'));
+    var tabUserPart = JSON.parse(localStorage.getItem('tabPAR'));
 
-function recherche() {
-    var l = document.getElementById("mail").value;
-    var p = document.getElementById("pwd").value;
-    var tab_r = JSON.parse(localStorage.getItem("tabORG"));
-    var tab_p = JSON.parse(localStorage.getItem("tabPAR"));
-    var r = false;
-    if ((l == "") && (p == "")) {
-        alert("il faut remplire les champs");
+    for (i = 0; i < tabUserPart.length; i++) {
+        if ((tabUserPart[i].mail == log) && (tabUserPart[i].password == pswd)) {
+            verif = true;
+            break;
+        }
     }
-    else {
-        for (i = 0; i < tab_r.length; i++) {
-            if ((l == tab_r[i].mail) && (p == tab_r[i].password)) {
-                location.href = "";
-                localStorage.setItem("iduti", tab_r[i].id);
-                r = true;
+    if (verif) {
+        localStorage.setItem("idPartConnect", tabUserPart[i].id);
+        window.location.href = "participant.html";
+    } else {
+        for (i = 0; i < tabUserOrg.length; i++) {
+            if ((tabUserOrg[i].mail == log) && (tabUserOrg[i].password == pswd)) {
+                verif = true;
                 break;
             }
-            if (r = false) {
-                for (i = 0; i < tab_p.length; i++) {
-                    if ((l == tab_p[i].mail) && (p == tab_p[i].password)) {
-                        location.href = "";
-                        localStorage.setItem("iduti", tab_p[i].id);
-                        r = true;
-                        break;
-                    }
-                }
-            }
         }
-        if (r == false) {
-            alert("mail ou/et mot de pass incorret");
+        if (verif) {
+            localStorage.setItem("idOrgConnect", tabUserOrg[i].id);
+            window.location.href = "organizer.html";
+        } else {
+            alert("Erreur: vous n'êtes pas inscrit! Veuillez s'inscrire d'abord!");
+            window.location.href = "inscri.html";
         }
     }
-
 }
