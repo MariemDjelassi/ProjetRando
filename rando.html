@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <form action="" method="post">
+    <form action="profileOrg.html" method="post">
         <fieldset><legend> Randonnée  </legend>
             <br>
         <div>
@@ -53,55 +53,18 @@
             <textarea id="details" name="rando_details"></textarea><br><br>
         </div>
         <div class="button">
-            <button type="submit" onclick="createRando()" class="btn"> <a class="ft">Valider</a> </button><br><br>
+            <button type="submit" onclick="createRando(idOrgConnect)" class="btn"> <a class="ft">Valider</a> </button><br><br>
         </div>
     </fieldset>
     </form>
 
-    <!--
-    <div>
-        <h3>Organiser une randonnée<br><br></h3>
-        <table border="0">
-            <tr>
-                <td class="td1">Nom:</td>
-                <td><input type="text" id="name" class="td2"></td>
-            </tr>
-            <tr>
-                <td class="td1">Date Départ:</td>
-                <td><input type="date" id="depart" class="td2"></td>
-            </tr>
-            <tr>
-                <td class="td1">Date Arrivée:</td>
-                <td><input type="date" id="arrivee" class="td2"></td>
-            </tr>
-            <tr>
-                <td class="td1">Période:</td>
-                <td><input type="number" id="periode" class="td2">jours</td>
-            </tr>
-            <tr>
-                <td class="td1">Destination:</td>
-                <td><input type="text" id="destination" class="td2"></td>
-            </tr>
-            <tr>
-                <td class="td1">Prix:</td>
-                <td><input type="number" id="prix" class="td2">dt</td>
-            </tr>
-            <tr>
-                <td class="td1">Nombre de place:</td>
-                <td><input type="number" id="places" class="td2"></td>
-            </tr>
-            <tr>
-                <td class="td1">Image:</td>
-                <td><input type="button" onclick="" class="td2">upload</td>
-            </tr>
-            <tr>
-                <td class="td1">Détails:</td>
-                <td><input type="text" id="details" class="td2"></td>
-            </tr>
-        </table><br>
+  
+    <div id="formRando" onload="" onclick="">
+        <h3>Modifier une randonnée<br><br></h3>
+        
         <button type="submit" onclick="" class="btn">Valider</button></p>
     </div>
--->
+
     <script src="./js/rando.js"></script>
 </body>
 

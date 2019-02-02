@@ -6,9 +6,11 @@ function generateID() {
 }
 
 //    Création de la table des Randonnées
+var idOrgConnect = localStorage.getItem('idOrgConnect');
 
-function createRando() {
+function createRando(idOrgConnect) {
     var rando = {
+        idUserConnect :JSON.parse(idOrgConnect),
         idRando : generateID(),
         nameRando : document.getElementById("name").value,
         departRando : document.getElementById("depart").value,
@@ -20,32 +22,32 @@ function createRando() {
         imgRando : document.getElementById("image").value,
         detailsRando : document.getElementById("details").value,
     }
-    var tabRando = JSON.parse(localStorage.getItem('randoTab')) || [];
-
+    var tabRando = JSON.parse(localStorage.getItem('tabRando')) || [];
     tabRando.push(rando);
-    localStorage.setItem("randoTab", JSON.stringify(tabRando));
+    localStorage.setItem("tabRando", JSON.stringify(tabRando));
 }
 
-//    supprimer une rondonnée existe
-/*
 
-function removeRando(idRd) {
-    var tabRando = JSON.parse(localStorage.getItem('randoTab'));
-    for (i = 0; i <= tabRando.length; i++) {
-        if (tabRando[i].idRando == idRd) {
-            tabRando.splice(i,1);  
+
+
+
+//    
+
+/*
+function test(){
+    var tabPAR= JSON.parse(localStorage.getItem("tabPAR"));
+    var connect  = getConnectedUserId();
+    console.log(connect);
+    var nom;
+    for ( let i=0; i<tabPAR.length; i++){
+        if(connect == tabPAR[i].id){
+            nom = tabPAR[i].nom;
         }
     }
-}
-
-function name(params) {
-    if (typeof(Storage) !== "undefined") {
-        // Store
-        localStorage.setItem("lastname", "Smith");
-        // Retrieve
-        document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-      } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-      }
+    console.log(nom);
+     document.getElementById("msg").innerHTML += nom;
 }
  */
+
+//    afficher la liste des randonnée d'un tel organisateur
+

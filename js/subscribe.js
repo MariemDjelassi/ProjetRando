@@ -23,17 +23,18 @@ function createUser() {
         var tabPartId = JSON.parse(localStorage.getItem("idPartConnect")) || [];
         tabPartId.push(user.id);
         localStorage.setItem("idPartConnect", JSON.stringify(tabPartId));
-        window.location.href = "participant.html";
+        window.location.href = "profilePart.html";
     }
     else {
         var tabORG = JSON.parse(localStorage.getItem("tabORG")) || [];
         tabORG.push(user);
         localStorage.setItem("tabORG", JSON.stringify(tabORG));
         // recuperer l'id user inscrit
+        localStorage.removeItem("idOrgConnect");
         var tabOrgId = JSON.parse(localStorage.getItem("idOrgConnect")) || [];
         tabOrgId.push(user.id);
-        localStorage.setItem("idOrgConnect", JSON.stringify(tabOrgId));
-        window.location.href = "organizer.html";
+        localStorage.setItem("idOrgConnect", JSON.stringify(tabOrgId[0]));
+        window.location.href = "profileOrg.html";
     }
 }
 
