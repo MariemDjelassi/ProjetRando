@@ -1,7 +1,3 @@
-//    affichage d'une seule randonnée d'un tel organisateur
-
-
-
 //    supprimer une randonnée existe
 
 function removeRando(idOrgConnect) {
