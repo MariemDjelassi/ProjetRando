@@ -1,15 +1,85 @@
-body{
-    background-image: url("5e9fc05d.jpg");
-    background-repeat: no-repeat;
-    /*background-size: 100% 100%;  */
- }
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  .img {
+      width:1333px;
+      height: 300px;
+  }
 
-.login{
-    position: absolute;
-    top:40%;
-    left: 25%;
-    width: 40%;
-    height: 70%;
-   }
+  /* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #8c8c8c;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color:  #99ebff;
+    text-align: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    font-size: 20px;
+  }
+  
 
-   
+  /* Style the content */
+  .content {
+    padding: 10px;
+    height: 500px; /* Should be removed. Only for demonstration */
+  }
+
+  
+  /* Container for flexboxes */
+  .row {
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .column {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10px;
+    height: 400px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Style the footer */
+  .footer {
+    background-color: #8c8c8c;
+    padding: 25px;
+    text-align: center;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .row {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+
+  .col {
+      text-align: center;
+      color: #8c8c8c;
+  }
+  .td {
+    text-align: left;
+    width: 130px;
+  }
+  

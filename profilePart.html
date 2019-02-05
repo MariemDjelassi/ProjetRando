@@ -6,17 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>participant Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/profilePart.css" />
    
-    -->
+ 
 </head>
 
 <body>
     <h1>Hello je suis un participant</h1>
     <button onclick="signUp()">Sign Up</button>
+    <div class="box">
+        <button class="btn" onclick="consulte()">Profil</button>
+        <button class="btn" onclick="">Randonnee</button>
+        <input class="box1" type="search" placeholder="Recherche">
+        <button style="float: right" class="btn" onclick="">Singup</button>
+        <p id="msg">bonjour</p>
+      </div>
+      <div class="box2">
+        <p id="html"></p>
+      </div>
+    
+      <div id="form-user" class="user">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" id="nom" placeholder="nom">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" id="age" placeholder="Age">
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="mail" class="form-control" id="mail" placeholder="Mail">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <input type="password" class="form-control" id="password" placeholder="PassWord">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" id="telphone" placeholder="telphone">
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="adresse" placeholder="adresse">
+          </div>
+          <div class="form-group">
+            <input type="file" class="form-control" id="image" placeholder="image" accept="image/*">
+          </div>
+        </form>
+        <button class="btn btn-primary" onclick="confirme()">confirme</button>
+    
+      </div>
+    
+    
+    
 
-    <script src="./js/participant.js"></script>
+    <script src="./js/profilePart.js"></script>
 </body>
 
 </html>

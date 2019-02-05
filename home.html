@@ -2,18 +2,94 @@
 <html>
 
 <head>
+    <title>Home Page</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--
-<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/home.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+        crossorigin="anonymous">
+
 </head>
 
 <body>
-<h1>Hello I'm home page!</h1>
+    <div class="topnav">
+        <img src="./img/montagne.jpg" class="img">
+        <a href="home.html">HOME</a>
+        <a href="subscribe.html">SUBSCRIBE</a>
+        <a href="login.html">LOG IN</a>
+    </div>
+    <div class="content">
+        <h2>Title</h2>
+        <p>content</p>
+    </div>
+    <div class="row">
+        <div class="column col">
+            <h4>NEWS LETTER</h4><br>
+            <table>
+                <tr>
+                    <td class="td">NOM</td>
+                    <td><input type="text" id="nom" /></td>
+                </tr>
+                <tr>
+                    <td class="td">PRENOM</td>
+                    <td><input type="text" id="prenom" /></td>
+                </tr>
+                <tr>
+                    <td class="td">MAIL</td>
+                    <td><input type="text" id="mail" /></td>
+                </tr>
+            </table>
+            <button onclick="">je m'abonne</button>
+        </div>
+        <div class="column col">
+            <h4>BLOG POSTS</h4><br>
+            <input type="text" id="blogInput" placeholder="Donnez votre avis..." />
+            <button onclick="">ok</button>
+            <p id="blog">#</p>
+        </div>
+        <div class="column col">
+            <h4>BECOME A PARTNER</h4><br>
+            <table>
+                <tr>
+                    <td class="td">NOM</td>
+                    <td><input type="text" id="nom" /></td>
+                </tr>
+                <tr>
+                    <td class="td">MAIL</td>
+                    <td><input type="mail" id="mail" /></td>
+                </tr>
+                <tr>
+                    <td class="td">PHONE</td>
+                    <td><input type="number" id="phone" /></td>
+                </tr>
+                <tr>
+                    <td class="td">Raison Social</td>
+                    <td><input type="text" id="" /></td>
+                </tr>
+                <tr>
+                    <td class="td">Message</td>
+                    <td><input type="text" id="" /></td>
+                </tr>
+            </table>
+            <button onclick="">Envoyer</button>
+        </div>
+        <div class="column col">
+            <h4>CONTACT</h4><br>
+            Rejoignez-nous : <br><br>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube-square"></i>
+            <i class="fab fa-google-plus-square"></i>
+        </div>
+    </div>
+    <div class="footer">
+        <h5>5 Points Talent Pool - All Copyrights Reserved - 2019</h5>
+    </div>
+
+
+
 </body>
 
 </html>
